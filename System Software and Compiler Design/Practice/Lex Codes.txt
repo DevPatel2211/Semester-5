@@ -1,0 +1,122 @@
+##########Lex Codes##########
+
+
+Practice:
+
+
+%{
+
+	#include<stdio.h>
+	
+%}
+
+	
+
+
+%%
+	"RAM"|"ram"		{printf("RAM");}
+	"SITA"|"sita"		{printf("SITA");}
+	.				{printf("Not defined this in our Rules!");}
+
+%%
+
+int main()
+{
+	yylex();
+	return 0;
+}
+
+
+-----------------------------------------------
+
+Lex Code - 1: Write a lax program to count the no of tokens and display each token with its length in the given statement 
+
+
+
+%{
+
+	#include<stdio.h>
+	int total_tokens=0;
+	
+%}
+	
+
+
+%%
+	[ \t\n]+				{\* Ignore white spacings *\}
+	[a-zA-Z0-9]+   { 
+                		token_count++;
+                		printf("TOKEN: %s, LENGTH: %d\n", yytext, yyleng); 
+               	    }
+	.              { 
+                		token_count++;
+                		printf("TOKEN: %s, LENGTH: %d\n", yytext, yyleng); 
+               	    }
+	
+
+%%
+
+int main(){
+	yylex();
+	printf("Total Number of tokens; %d \n", total_tokens);
+	return 0;
+}
+
+---------------------------------------------------
+
+Lex Code - 2: Write a Lex program to identify keywords, identifiers, numbers and other characters & generate token for each
+
+
+%{
+	#include<stdio.h>
+	int keywords = 0;
+	int identifiers = 0;
+	int number = 0;
+	int other = 0;
+
+%}
+
+
+
+%%
+	[ \t\n]									{ \* Remove White Spacings \* }
+	int|char|float|double|string|for|else|continue|break	{keyword++, printf("Keyword : %s, Length : %d", yytext, yyleng);}
+	[0-9]+									{numbers++, printf("Number : %s, Length : %d", yytext, yyleng);}
+	[a-zA-Z_][a-zA-Z0-9_]*						{identifiers++, printf("Identifier : %s, Length : %d", yytext, yyleng);}
+	.										{other++, printf("Other : %s, Length : %d", yytext, yyleng);}
+%%
+
+
+int main(){
+	yylex();
+	printf("Total Keywords : %d\n", keywords);
+	printf("Total Identifiers : %d\n", identifiers);
+	printf("Total Number : %d\n", number);
+	printf("Total Other : %d\n", other);
+	return 0;
+}
+
+---------------------------------------------------------
+
+Lex Code - 3: Count no of vowels in the string using Lex program 
+
+
+%{
+	
+
+%}
+
+
+
+%%
+
+
+%%
+
+
+int main(){
+	yylex();
+	printf("Total No of Vowels : %d", vowels);
+	printf("Total No of Consonant : %d", consonent);
+	return 0;
+}

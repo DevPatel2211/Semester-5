@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+char *keyword_dir[] = {"int", "float"};
+
+char *operator_dir[] = {"+", "-"};
+
+int num_of_keyword = sizeof(keyword_dir) / sizeof(keyword_dir[0]);
+int num_of_operator = sizeof(operator_dir) / sizeof(operator_dir[0]);
+
+// int comparision(char *str1, char *str2)
+// {
+//     while (strcmp(str1, str2))
+//     {
+//         return 1;
+//     }
+//     return 0;
+// }
+
+// int alphabet(char c)
+// {
+//     return (c >= "A" && c <= "Z") || (c >= "a" && c <= "z");
+// }
+
+int main()
+{
+    // printf("%d %d", num_of_keyword, num_of_operator);
+    FILE *inputfile = fopen("input.txt", "r");
+    FILE *outputfile = fopen("output.txt", "w");
+
+    fprintf(outputfile, "num_of_keywords : %d\nnum_of_operators : %d\n", num_of_keyword, num_of_operator);
+
+    fclose(inputfile);
+    fclose(outputfile);
+
+    return 0;
+}

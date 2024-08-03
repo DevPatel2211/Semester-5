@@ -1,0 +1,6 @@
+Keywords: 3
+Operators: 0
+Identifiers: 3
+ Others: 10
+
+Total Tokens: 16

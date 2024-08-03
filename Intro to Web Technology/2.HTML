@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+        href="C:\Users\devkp\OneDrive\Desktop\PDPU_ACADMICS\Semester-5\Intro to Web Technology\Form-icon.png">
+    <title>Application Form</title>
+</head>
+
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Application Form:</legend><br>
+
+            <h4 style="color: gray;">* field is required field to fill!</h4><br><br>
+
+            <label name="First Name" for="fname">*First Name:</label>
+            <input name="First Name" type="text" placeholder="Dev"> &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label name="Last Name" for="lname">*Last Name:</label>
+            <input name="Last Name" type="text" placeholder="Patel"><br><br>
+
+            <label name="Date of Birth" for="dob">*Date of Birth:</label>
+            <input name="Date of Birth" type="date" placeholder="dd-mm-yyyy"> &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label name="Age" for="age">*Age:</label>
+            <input name="Age" type="number" min="18" max="100" placeholder="18<=age<=100"><br><br>
+
+            <label name="Gender" for="gender">*Gender:</label>&nbsp;&nbsp;&nbsp;
+            <input name="male" type="radio">
+            <label name="Male" for="male">Male</label>
+
+            <input name="female" type="radio">
+            <label name="Female" for="female">Female</label><br><br>
+
+            <label name="address" for="address">*Address:</label>
+            <textarea name="address" id="address" rows="5" cols="50">Add your text here!</textarea><br><br>
+
+            <label name="Choice" for="choice">*Choice your Hobby:</label>&nbsp;&nbsp;&nbsp;
+            <input name="Foodie" type="checkbox">
+            <label name="Foodie" for="foodie">Foodie</label>
+
+            <input name="Coding" type="checkbox">
+            <label name="Coding" for="Coding">Coding</label><br><br>
+
+            <label name="password" for="password">*Password:</label>
+            <input name="password" type="password" name="password" id="password">
+
+            <label name="confirm-password" for="confirm-password">*Confirm Password:</label>
+            <input name="confirm-password" type="confirm-password" name="confirm-password"
+                id="confirm-password"><br><br>
+
+            <label name="dropdown" for="dropdown">*Remember Me?</label>
+            <select name="drnoopdown" id="dropdown">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br><br>
+
+            <button type="submit"
+                onclick="alert('Your form has been submitted!')">Submit!</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="reset" onclick="alert('Your form has been submitted!')">Reset!</button>
+        </fieldset>
+    </form>
+
+    <br><br>
+
+    <form action="#">
+        <fieldset>
+            <legend>Another One!</legend>
+
+            <label for="image">Image:</label>
+            <input type="image" id="image"
+                src="C:\Users\devkp\OneDrive\Desktop\PDPU_ACADMICS\Semester-5\Intro to Web Technology\Form-icon.png"
+                height="30px" width="30px"><br><br>
+
+            <label for="hidden">Hidden:</label>
+            <input type="hidden" id="hidden"><br><br>
+
+            <label for="month">Month:</label>
+            <input type="month" id="month"><br><br>
+
+            <label for="range">Range(b/w 0-10):</label>
+            <input type="range" id="range" min="0" max="10"><br><br>
+
+            <label for="search">Search:</label>
+            <input type="search" id="search"><br><br>
+
+            <label for="tel">Tel:</label>
+            <input type="tel" id="tel"><br><br>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time"><br><br>
+
+            <label for="url">URL:</label>
+            <input type="url" id="url"><br><br>
+
+            <label for="week">Week:</label>
+            <input type="week" id="week"><br><br>
+
+            <label for="datalist">DateField</label>
+            <input list="Ls's" name="Ls's">
+            <datalist id="Ls's">
+                <option value="Ls1">LS1</option>
+                <option value="Ls2">LS2</option>
+                <option value="Ls3">LS3</option>
+                <option value="Ls4">LS4</option>
+                <option value="Ls5">LS5</option>
+            </datalist><br><br>
+
+            <button type="submit"
+                onclick="alert('Your form has been submitted!')">Submit!</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="reset" onclick="alert('Your form has been submitted!')">Reset!</button>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
